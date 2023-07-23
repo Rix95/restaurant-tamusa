@@ -1,7 +1,16 @@
 import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
-  return <div className={styles.container}>Navbar</div>;
+  return (
+    <div className={styles.container}>
+      <div className={styles.item}></div>
+      <div className={styles.callButton}>
+       <Image src=" 
+      </div>
+      <div className={styles.item}></div>
+      <div className={styles.item}></div>
+    </div>
+  );
 };
 
 export default Navbar;
