@@ -82,7 +82,7 @@
 html,
 body {
   max-width: 100vw;
-  /* overflow-x: hidden; Messes with navbar*/
+  overflow-x: hidden;
 }
 
 body {
