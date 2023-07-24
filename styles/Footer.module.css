@@ -1,5 +1,5 @@
 .container {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 600px);
   background-color: #222;
   display: flex;
 }
@@ -8,6 +8,7 @@
   flex: 1;
   position: relative;
   display: flex;
+  /* border: 4px solid #dad60e; */
 }
 
 .item:last-child {
@@ -22,19 +23,23 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  /* border: 4px solid #3b0caa; */
 }
 
 .title {
-  font-size: 18px;
+  font-size: 28px;
   color: #b7903c;
 }
 
 .text {
   color: lightgray;
+  font-size: 18px;
 }
 
 .motto {
   color: rgb(211, 211, 211);
+  font-size: 30px;
+  word-wrap: break-word;
 }
 
 @media screen and (max-width: 480px) {
