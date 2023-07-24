@@ -5,16 +5,16 @@ import { useState } from "react";
 const Featured = () => {
   const [index, setIndex] = useState(0);
   const images = [
-    "/img/featured.png", //TBD
-    "/img/featured2.png", //TBD
-    "/img/featured3.png", //TBD
+    "/img/featured.png",
+    "/img/featured2.png",
+    "/img/featured3.png",
   ];
 
-  const handleNext = (direction) => {
-    if (direction === "left") {
+  const handleArrow = (direction) => {
+    if (direction === "l") {
       setIndex(index !== 0 ? index - 1 : 2);
     }
-    if (direction === "right") {
+    if (direction === "r") {
       setIndex(index !== 2 ? index + 1 : 0);
     }
   };
@@ -24,14 +24,9 @@ const Featured = () => {
       <div
         className={styles.arrowContainer}
         style={{ left: 0 }}
-        onClick={() => handleArrow("left")}
+        onClick={() => handleArrow("l")}
       >
-        <Image
-          src="/img/arrowl.png"
-          alt="left-arrow"
-          layout="fill"
-          objectFit="contain"
-        />
+        <Image src="/img/arrowl.png" alt="" layout="fill" objectFit="contain" />
       </div>
       <div
         className={styles.wrapper}
@@ -46,7 +41,7 @@ const Featured = () => {
       <div
         className={styles.arrowContainer}
         style={{ right: 0 }}
-        onClick={() => handleArrow("right")}
+        onClick={() => handleArrow("r")}
       >
         <Image src="/img/arrowr.png" layout="fill" alt="" objectFit="contain" />
       </div>
