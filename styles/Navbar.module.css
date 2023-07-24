@@ -17,7 +17,12 @@
 
 .item:nth-child(2) {
   flex: 3;
-  /* background-color: white; */
+  /* background-color: blue;  For test purposes*/
+  justify-content: center; /* MUST REVIEW BEFORE DEPLOYMENT */
+}
+
+.item:last-child {
+  justify-content: flex-end;
 }
 
 .callButton {
@@ -33,7 +38,7 @@
   color: white;
 }
 
-.text:nth-child(1) {
+.text:first-child {
   font-size: 12px;
   font-weight: 500px;
 }
@@ -41,4 +46,42 @@
 .text:last-child {
   font-size: 20px;
   font-weight: bold;
+}
+
+.list {
+  padding: 0;
+  display: flex;
+  /* flex: 1; */
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: white;
+  /* background-color: orange; or testing purposes */
+  /* flex-grow: 1; */
+}
+
+.listItem {
+  /* flex: 1;
+  flex-grow: 1; */
+  margin: 20px;
+  font-weight: 50;
+}
+
+.cart {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: #d1411e;
 }
