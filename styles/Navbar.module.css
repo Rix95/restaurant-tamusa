@@ -82,11 +82,24 @@
 }
 
 @media screen and (max-width: 480px) {
-  .item:nth-child(2) {
+  .container {
+    height: auto;
+    text-align: center;
+  }
+
+  .item:first-child {
     display: none;
   }
 
-  .item:nth-child(1) {
-    flex: 3;
+  .item {
+    flex-direction: column;
+  }
+
+  .title {
+    font-style: 30px;
+  }
+
+  .text {
+    font-style: 30px;
   }
 }
