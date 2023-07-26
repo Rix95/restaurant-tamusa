@@ -63,3 +63,25 @@
     font-size: 20px;
   }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    height: auto;
+    text-align: center;
+  }
+  .item:first-child {
+    display: none;
+  }
+
+  .item {
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+}

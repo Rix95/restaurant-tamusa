@@ -29,3 +29,13 @@
     text-align: center;
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .title {
+    text-align: center;
+  }
+
+  .desc {
+    width: 90%;
+    text-align: center;
+  }
+}

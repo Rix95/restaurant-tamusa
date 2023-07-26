@@ -82,24 +82,20 @@
 }
 
 @media screen and (max-width: 480px) {
-  .container {
-    height: auto;
-    text-align: center;
-  }
-
-  .item:first-child {
+  .item:nth-child(2) {
     display: none;
   }
 
-  .item {
-    flex-direction: column;
+  .item:nth-child(1) {
+    flex: 3;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .item:nth-child(2) {
+    display: none;
   }
 
-  .title {
-    font-style: 30px;
-  }
-
-  .text {
-    font-style: 30px;
+  .item:nth-child(1) {
+    flex: 3;
   }
 }
