@@ -3,12 +3,12 @@ import mongoose from "mongoose";
 const ProductSchema = new mongoose.Schema(
   {
     title: {
-      type: string,
+      type: String,
       required: true,
       maxLength: 60,
     },
     desc: {
-      type: string,
+      type: String,
       required: true,
       maxLength: 200,
     },
@@ -20,7 +20,7 @@ const ProductSchema = new mongoose.Schema(
       type: [Number],
       required: true,
     },
-    extraOptions: {
+    extraOption: {
       type: [
         {
           text: { type: String, required: true },
