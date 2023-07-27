@@ -41,7 +41,7 @@ const Product = ({product}) => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{product.title}</h1>
-        <span className={styles.price}>${product}</span>
+        <span className={styles.price}>${price}</span>
         <p className={styles.desc}>{product.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
         <div className={styles.sizes}>
