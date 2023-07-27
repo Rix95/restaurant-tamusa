@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { initialize } from "next/dist/server/lib/render-server";
 
-const createSlice = createSlice({
+const cartSlice = createSlice({
   name: "cart",
   initialState: {
     products: [],
