@@ -6,6 +6,8 @@ import axios from "axios";
 const Product = ({product}) => {
   const [price, setPrice] = useState(product.prices[0]);
   const [size, setSize] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [extras, setExtras] = useState([]);
 
   const changePrice = (number) => {
     setPrice(price + number);
@@ -22,9 +24,14 @@ const Product = ({product}) => {
     const checked = e.target.checked;
 
     if(checked){
-
+        changePrice(option.price);
+        setExtras((prev) => [...prev,option]);
+    }else{
+      changePrice(-option.price);
+      setExtras(extras.filter((extra) => extra._id !== option._id));
     }
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -34,7 +41,7 @@ const Product = ({product}) => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{product.title}</h1>
-        <span className={styles.price}>${product.prices[size]}</span>
+        <span className={styles.price}>${product}</span>
         <p className={styles.desc}>{product.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
         <div className={styles.sizes}>
@@ -67,7 +74,8 @@ const Product = ({product}) => {
           ))}
         </div>
         <div className={styles.add}>
-          <input type="number" defaultValue={1} className={styles.quantity} />
+          <input onChange={(e) => setQuantity(e.target.value)}
+           type="number" defaultValue={1} className={styles.quantity} />
           <button className={styles.button}>Add to Cart</button>
         </div>
       </div>
@@ -75,7 +83,7 @@ const Product = ({product}) => {
   );
 };
 
-export const getServerSideProps = async ({params }) => {
+export const getServerSideProps = async ({params}) => {
   const res = await axios.get(`http://localhost:3000/api/products/${params.id}`);
   return {
     props: {
