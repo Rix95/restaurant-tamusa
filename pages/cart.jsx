@@ -1,12 +1,5 @@
 import styles from "../styles/Cart.module.css";
 import Image from "next/image";
-<<<<<<< Updated upstream
-import { useDispatch, useSelector } from "react-redux";
-
-const Cart = () => {
-  const dispatch = useDispatch()
-  const cart = useSelector((state) => state.cart);
-=======
 import {useDispatch, useSelector} from "react-redux";
 import { useEffect, useState} from "react";
 import {
@@ -98,9 +91,6 @@ const Cart = () => {
         </>
     );
 }
-
-
->>>>>>> Stashed changes
   return (
     <div className={styles.container}>
       <div className={styles.left}>
