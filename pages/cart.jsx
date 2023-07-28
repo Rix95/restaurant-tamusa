@@ -10,6 +10,7 @@ import { StyleRegistry } from "styled-jsx";
 import axios from "axios";
 import {useRouter} from "next/router";
 import cartSlice, {reset} from "../redux/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Cart = () => {
   const dispatch = useDispatch()
