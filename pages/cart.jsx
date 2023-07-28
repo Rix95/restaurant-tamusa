@@ -1,13 +1,6 @@
 import styles from "../styles/Cart.module.css";
 import Image from "next/image";
-<<<<<<< Updated upstream
 import { useDispatch, useSelector } from "react-redux";
-
-const Cart = () => {
-  const dispatch = useDispatch()
-  const cart = useSelector((state) => state.cart);
-=======
-import {useDispatch, useSelector} from "react-redux";
 import { useEffect, useState} from "react";
 import {
     PayPalScriptProvider,
@@ -19,15 +12,15 @@ import axios from "axios";
 import {useRouter} from "next/router";
 import cartSlice, {reset} from "../redux/cartSlice";
 
-
 const Cart = () => {
+  const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart);
+
   const [open,setOpen] = useState(false);
   // This values are the props in the UI
   const amount = cart.total;
   const currency = "USD";
   const style = {"layout":"vertical"};
-  const dispatch = useDispatch();
   const router = useRouter();
 
   const createOrder = async (data) =>{
@@ -100,7 +93,6 @@ const Cart = () => {
 }
 
 
->>>>>>> Stashed changes
   return (
     <div className={styles.container}>
       <div className={styles.left}>
