@@ -2,7 +2,7 @@ import axios from "axios";
 import Image from "next/image";
 import styles from "../../styles/Admin.module.css"
 
-const index = ({orders, products}) => {
+const Index = ({orders, products}) => {
     return (
         <div className = {styles.container}>
             <div className={styles.item}>
@@ -84,4 +84,4 @@ export const getServerSideProps = async ()=>{
     };
 };
 
-export default index;
+export default Index;
