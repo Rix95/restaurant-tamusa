@@ -2,24 +2,18 @@ import mongoose from "mongoose";
 
 const OrderSchema = new mongoose.Schema(
   {
-    title: {
+    customer: {
       type: String,
       required: true,
-      maxLength: 60,
+      maxlength: 60,
     },
-    desc: {
+    address: {
       type: String,
       required: true,
-      maxLength: 200,
+      maxlength: 200,
     },
-
-    img: {
-      type: String,
-      required: true,
-    },
-
-    prices: {
-      type: [Number],
+    total: {
+      type: Number,
       required: true,
     },
     status: {
@@ -28,16 +22,7 @@ const OrderSchema = new mongoose.Schema(
     },
     method: {
       type: Number,
-      required: true,
-    },
-
-    extraOptions: {
-      type: [
-        {
-          text: { type: String, required: true },
-          price: { type: Number, required: true },
-        },
-      ],
+      required:true
     },
   },
   { timestamps: true }
