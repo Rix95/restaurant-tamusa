@@ -8,7 +8,8 @@ import styles from "../styles/Home.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home({ productList }) {
+export default function Home({ productList,  admin }) {
+  const [close, setClose] = useState(true);
   return (
     <div className={styles.container}>
       <Head>
@@ -18,16 +19,26 @@ export default function Home({ productList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured/>
+      {admin && <AddButton setClose={setClose}/>}
       <ProductList productList={productList} />
+      {!close && <Add setClose={setClose}/>}
     </div>
   );
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (ctx) => {
+  const myCookie = ctx.req?.cookies || "";
+  let admin = false;
+
+  if(myCookie.token === process.env.TOKEN){
+    admin = true;
+  }
+
   const res = await axios("http://localhost:3000/api/products");
   return {
     props: {
       productList: res.data,
+      admin
     },
   };
 };
