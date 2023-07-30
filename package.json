@@ -12,6 +12,7 @@
     "@paypal/react-paypal-js": "^8.1.0",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
+    "cookie": "^0.5.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
     "ky": "^0.33.3",
