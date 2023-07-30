@@ -3,8 +3,11 @@ import { Inter, Space_Mono } from "next/font/google";
 import Image from "next/image";
 import Featured from "@/components/Featured";
 import ProductList from "@/components/ProductList";
+import Add from "../components/Add";
+import AddButton from "../components/AddButton";
 import axios from "axios";
 import styles from "../styles/Home.module.css";
+import { useEffect, useState} from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
