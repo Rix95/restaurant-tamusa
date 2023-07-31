@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #d1411e;
+  --secondary-color: #6c757d;
+  --font-family: "Arial", sans-serif;
+  /* Add more variables as needed */
+}
+
 html,
 body {
   padding: 0;
