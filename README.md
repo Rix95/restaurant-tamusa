@@ -6,11 +6,11 @@
 We created a restaurant website that allows the user to place orders online, the owner can also access an admin panel to edit and delete products. A MongoDB database is also implemented to hold menu items and orders
 
 ### Tech Stack:
--React Framework: -Next.js
--Package manager: Yarn
--Database: MongoDB
--Image hosting: Cloudinary
--API useds: Axios, paypal, eslint, redux.
+  -React Framework: -Next.js
+  -Package manager: Yarn
+  -Database: MongoDB
+  -Image hosting: Cloudinary
+  -API useds: Axios, paypal, eslint, redux.
 
 
 
@@ -28,9 +28,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 Credits and Participation in the project
 
 Ricardo Elizondo:
-- Team Leader.
-- API routing, MongoDB and Cloudinary.
-- CSS Design.
+  - Team Leader.
+  - API routing, MongoDB and Cloudinary.
+  - CSS Design.
 
 Ernesto Diaz:
 
