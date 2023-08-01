@@ -34,4 +34,6 @@ Ricardo Elizondo:
 
 Ernesto Diaz:
 
-Enya ___:
+Enya Palomino:
+- Shopping cart module / modal
+- Adding a new product module
