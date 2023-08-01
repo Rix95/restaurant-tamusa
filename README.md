@@ -25,12 +25,12 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-Credits and Participation in the project: 
+Credits and Participation in the project
 
 Ricardo Elizondo:
-- Team Leader
+- Team Leader.
 - API routing, MongoDB and Cloudinary.
-- CSS Design
+- CSS Design.
 
 Ernesto Diaz:
 
