@@ -33,6 +33,9 @@ Ricardo Elizondo:
   - CSS Design.
 
 Ernesto Diaz:
+  - Paypal Integration
+  - Admin Panel
+  - Cookie Authorization
 
 Enya Palomino:
 - Shopping cart module / modal
