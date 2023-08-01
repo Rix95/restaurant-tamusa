@@ -1,5 +1,5 @@
 .container {
-  height: 100px;
+  height: 200px;
   padding: 0px 50px;
   background-color: #362417;
   display: flex;
@@ -38,12 +38,12 @@
 }
 
 .text:first-child {
-  font-size: 12px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 .text:last-child {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -57,6 +57,7 @@
 
 .listItem {
   margin: 20px;
+  font-size: 30px;
   font-weight: 500;
   cursor: pointer;
 }
