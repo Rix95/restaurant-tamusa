@@ -6,10 +6,9 @@ const ProductList = ({ productList }) => {
     <div className={styles.container}>
       <h1 className={styles.title}>Featured Products</h1>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-        dignissimos delectus, quibusdam, dolores maxime ullam incidunt beatae
-        saepe, animi odit alias consequuntur voluptates in aliquam quos
-        consectetur. Nisi, alias doloremque.
+        Try our tasty burgers, and you will never want to eat anything else!,
+        style your burger however you want! There is not such thing as too much
+        with us!
       </p>
       <div className={styles.wrapper}>
         {productList.map((product) => (
