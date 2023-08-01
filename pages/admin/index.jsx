@@ -12,7 +12,8 @@ const Index = ({ orders, products }) => {
     console.log(id);
     try {
       const res = await axios.delete(
-        "http://localhost:3000/api/products/" + id
+        "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/products/" +
+          id
       );
       setProductList(productList.filter((product) => product._id !== id));
     } catch (err) {
@@ -25,9 +26,13 @@ const Index = ({ orders, products }) => {
     const currentStatus = item.status;
 
     try {
-      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
-        status: currentStatus + 1,
-      });
+      const res = await axios.put(
+        "https://restaurant-tamusa-d25b73ff550d.herokuapp.com//api/orders/" +
+          id,
+        {
+          status: currentStatus + 1,
+        }
+      );
       setOrderList([
         res.data,
         ...orderList.filter((order) => order._id !== id),
@@ -120,17 +125,21 @@ const Index = ({ orders, products }) => {
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
 
-  if(myCookie.token !== process.env.TOKEN) {
-    return{
-      redirect:{
+  if (myCookie.token !== process.env.TOKEN) {
+    return {
+      redirect: {
         destination: "/admin/login",
         permanent: false,
       },
     };
   }
 
-  const productRes = await axios.get("http://localhost:3000/api/products");
-  const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const productRes = await axios.get(
+    "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/products"
+  );
+  const orderRes = await axios.get(
+    "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/orders"
+  );
 
   return {
     props: {

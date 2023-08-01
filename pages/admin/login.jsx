@@ -11,10 +11,13 @@ const Login = () => {
 
   const handleClick = async () => {
     try {
-      await axios.post("http://localhost:3000/api/login", {
-        username,
-        password,
-      });
+      await axios.post(
+        "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/login",
+        {
+          username,
+          password,
+        }
+      );
       router.push("/admin");
     } catch (err) {
       setError(true);
@@ -35,13 +38,13 @@ const Login = () => {
           type="password"
           className={styles.input}
           onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={handleClick} className={styles.button}>
-            Sign In
-          </button>
-          {error && <span className={styles.error}>Wrong Credentials!</span>}
+        />
+        <button onClick={handleClick} className={styles.button}>
+          Sign In
+        </button>
+        {error && <span className={styles.error}>Wrong Credentials!</span>}
       </div>
-  </div>
+    </div>
   );
 };
 
