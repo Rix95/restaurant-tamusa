@@ -5,7 +5,7 @@
 ## Introduction
 We created a restaurant website that allows the user to place orders online, the owner can also access an admin panel to edit and delete products. A MongoDB database is also implemented to hold menu items and orders
 
-### Tech Stack
+### Tech Stack:
 -React Framework: -Next.js
 -Package manager: Yarn
 -Database: MongoDB
