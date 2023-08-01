@@ -5,9 +5,6 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <Image src="/img/bg.png" objectFit="cover" layout="fill" alt="" />
-      </div>
-      <div className={styles.item}>
         <div className={styles.card}>
           <h2 className={styles.motto}>
             OH YES, WE DID.THE LAMA PIZZA, <br></br>WELL BAKED SLICE OF PIZZA.
