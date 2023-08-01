@@ -1,11 +1,11 @@
-### Burgers N' Chill (Project for Web Development Summer Course 2023)
+# Burgers N' Chill (Project for Web Development Summer Course 2023)
 
 
 
 ## Introduction
 We created a restaurant website that allows the user to place orders online, the owner can also access an admin panel to edit and delete products. A MongoDB database is also implemented to hold menu items and orders
 
-#Tech Stack
+### Tech Stack
 React Framework: -Next.js
 Package manager: Yarn
 Database: MongoDB
@@ -25,13 +25,13 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-**Credits and Participation in the project: 
+** Credits and Participation in the project: 
 
-*Ricardo Elizondo:
+* Ricardo Elizondo:
 -Lead Designer
 -API routing, MongoDB and Cloudinary.
 -CSS Design
 
-*Ernesto Diaz
+* Ernesto Diaz
 
-*Enya ___
+* Enya ___
