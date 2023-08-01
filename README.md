@@ -1,4 +1,4 @@
-## Burgers N' Chill (Project for Web Development Summer Course 2023)
+### Burgers N' Chill (Project for Web Development Summer Course 2023)
 
 
 
