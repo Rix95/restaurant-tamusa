@@ -32,6 +32,6 @@ Ricardo Elizondo:
 - API routing, MongoDB and Cloudinary.
 - CSS Design
 
-* Ernesto Diaz:
+Ernesto Diaz:
 
-* Enya ___:
+Enya ___:
