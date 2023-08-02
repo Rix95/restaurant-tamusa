@@ -1,7 +1,7 @@
 .container {
-  height: 100px;
+  height: 200px;
   padding: 0px 50px;
-  background-color: var(--primary-color);
+  background-color: #362417;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,12 +38,12 @@
 }
 
 .text:first-child {
-  font-size: 12px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 .text:last-child {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -57,6 +57,7 @@
 
 .listItem {
   margin: 20px;
+  font-size: 30px;
   font-weight: 500;
   cursor: pointer;
 }
@@ -78,7 +79,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: #d1411e;
+  color: #070302;
 }
 
 @media screen and (max-width: 480px) {
