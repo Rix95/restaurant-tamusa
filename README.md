@@ -1,4 +1,6 @@
+
 # Burgers N' Chill (Project for Web Development Summer Course 2023)
+
 
 
 
@@ -40,3 +42,4 @@ Ernesto Diaz:
 Enya Palomino:
 - Shopping cart module / modal
 - Adding a new product module
+
