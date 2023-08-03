@@ -37,7 +37,9 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios("http://localhost:3000/api/products");
+  const res = await axios(
+    "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/products"
+  );
   return {
     props: {
       productList: res.data,

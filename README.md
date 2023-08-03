@@ -1,4 +1,6 @@
+
 # Burgers N' Chill (Project for Web Development Summer Course 2023)
+
 
 
 
@@ -33,5 +35,11 @@ Ricardo Elizondo:
   - CSS Design.
 
 Ernesto Diaz:
+  - Paypal Integration
+  - Admin Panel
+  - Cookie Authorization
 
-Enya ___:
+Enya Palomino:
+- Shopping cart module / modal
+- Adding a new product module
+
