@@ -12,8 +12,8 @@ const Navbar = () => {
           <Image src="/img/telephone.png" alt="" width="32" height="32" />
         </div>
         <div className={styles.texts}>
-          <div className={styles.text}>ORDER NOW!</div>
-          <div className={styles.text}>012 345 678</div>
+          <div className={styles.text}>Call us for special orders!</div>
+          <div className={styles.text}>(830)-319-1390</div>
         </div>
       </div>
       <div className={styles.item}>
@@ -21,10 +21,10 @@ const Navbar = () => {
           <Link href="/" passHref>
             <li className={styles.listItem}>Homepage</li>
           </Link>
-          <li className={styles.listItem}>Products</li>
-          <li className={styles.listItem}>Menu</li>
-          <Image src="/img/logo.png" alt="" width="200" height="200" />
-          <li className={styles.listItem}>Careers</li>
+          <li className={styles.listItem}>Books</li>
+          <li className={styles.listItem}> </li>
+          <Image src="/img/jaguar.png" alt="" width="200" height="200" />
+
           <li className={styles.listItem}>About Us</li>
           <li className={styles.listItem}>Contact</li>
         </ul>

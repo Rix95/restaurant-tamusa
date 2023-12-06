@@ -12,8 +12,7 @@ const Index = ({ orders, products }) => {
     console.log(id);
     try {
       const res = await axios.delete(
-        "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/products/" +
-          id
+        "http://localhost:3000/api/products/" + id
       );
       setProductList(productList.filter((product) => product._id !== id));
     } catch (err) {
@@ -26,13 +25,9 @@ const Index = ({ orders, products }) => {
     const currentStatus = item.status;
 
     try {
-      const res = await axios.put(
-        "https://restaurant-tamusa-d25b73ff550d.herokuapp.com//api/orders/" +
-          id,
-        {
-          status: currentStatus + 1,
-        }
-      );
+      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
+        status: currentStatus + 1,
+      });
       setOrderList([
         res.data,
         ...orderList.filter((order) => order._id !== id),
@@ -45,7 +40,7 @@ const Index = ({ orders, products }) => {
   return (
     <div className={styles.container}>
       <div className={styles.item}>
-        <h1 className={styles.title}>Products</h1>
+        <h1 className={styles.title}>Books</h1>
         <table className={styles.table}>
           <tbody>
             <tr className={styles.trTitle}>
@@ -53,7 +48,6 @@ const Index = ({ orders, products }) => {
               <th>Id</th>
               <th>Title</th>
               <th>Price</th>
-              <th>Action</th>
             </tr>
           </tbody>
           {productList.map((product) => (
@@ -70,7 +64,7 @@ const Index = ({ orders, products }) => {
                 </td>
                 <td>{product._id.slice(0, 5)}...</td>
                 <td>{product.title}</td>
-                <td>${product.prices[0]}</td>
+                <td>${product.price}</td>
                 <td>
                   <button className={styles.button}>Edit</button>
                   <button
@@ -94,8 +88,6 @@ const Index = ({ orders, products }) => {
               <th>Customer</th>
               <th>Total</th>
               <th>Payment</th>
-              <th>Status</th>
-              <th>Action</th>
             </tr>
           </tbody>
           {orderList.map((order) => (
@@ -106,12 +98,6 @@ const Index = ({ orders, products }) => {
                 <td>${order.total}</td>
                 <td>
                   {order.method === 0 ? <span>cash</span> : <span>paid</span>}
-                </td>
-                <td>{status[order.status]}</td>
-                <td>
-                  <button onClick={() => handleStatus(order._id)}>
-                    Next Stage
-                  </button>
                 </td>
               </tr>
             </tbody>
@@ -125,21 +111,8 @@ const Index = ({ orders, products }) => {
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
 
-  if (myCookie.token !== process.env.TOKEN) {
-    return {
-      redirect: {
-        destination: "/admin/login",
-        permanent: false,
-      },
-    };
-  }
-
-  const productRes = await axios.get(
-    "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/products"
-  );
-  const orderRes = await axios.get(
-    "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/orders"
-  );
+  const productRes = await axios.get("http://localhost:3000/api/products");
+  const orderRes = await axios.get("http://localhost:3000/api/orders");
 
   return {
     props: {

@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { Inter, Space_Mono } from "next/font/google";
 import Image from "next/image";
-import Featured from "@/components/Featured";
 import ProductList from "@/components/ProductList";
 import Add from "../components/Add";
 import AddButton from "../components/AddButton";
@@ -16,12 +15,12 @@ export default function Home({ productList, admin }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Burgers N' Chill</title>
+        <title>Jaguar Bookstore</title>
         <meta name="description" content="Grade A Restaurant" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Featured />
+
       {admin && <AddButton setClose={setClose} />}
       <ProductList productList={productList} />
       {!close && <Add setClose={setClose} />}
@@ -31,15 +30,9 @@ export default function Home({ productList, admin }) {
 
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
-  let admin = false;
+  let admin = true;
 
-  if (myCookie.token === process.env.TOKEN) {
-    admin = true;
-  }
-
-  const res = await axios(
-    "https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/products"
-  );
+  const res = await axios("http://localhost:3000/api/products");
   return {
     props: {
       productList: res.data,

@@ -12,7 +12,9 @@ const OrderDetails = ({ total, createOrder }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h1 className={styles.title}>You will pay $12 after delivery.</h1>
+        <h1 className={styles.title}>
+          Please enter your name, delivery address and phone number.
+        </h1>
         <div className={styles.item}>
           <label>Name Surname</label>
           <input
@@ -34,7 +36,7 @@ const OrderDetails = ({ total, createOrder }) => {
           <label className={styles.label}>Address</label>
           <textarea
             rows={5}
-            placeholder="Elton St. 505 NY"
+            placeholder="Your address here"
             type="text"
             className={styles.textarea}
             onChange={(e) => setAddress(e.target.value)}

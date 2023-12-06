@@ -1,1 +1,1 @@
-MONGO_URL = mongodb+srv://Rix_tamusa:RsalKNDtrVNUhDUd@cluster0.feahmx1.mongodb.net/restaurant?retryWrites=true&w=majority
+MaONGO_URL = mongodb+srv://Rix_tamusa:RsalKNDtrVNUhDUd@cluster0.feahmx1.mongodb.net/restaurant?retryWrites=true&w=majority

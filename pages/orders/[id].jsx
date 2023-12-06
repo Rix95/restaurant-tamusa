@@ -52,20 +52,7 @@ const Order = ({ order }) => {
                 alt=""
               />
             </div>
-          </div>
-          <div className={statusClass(1)}>
-            <Image src="/img/bake.png" width={30} height={30} alt="" />
-            <span>Preparing</span>
-            <div className={styles.checkedIcon}>
-              <Image
-                className={styles.checkedIcon}
-                src="/img/checked.png"
-                width={20}
-                height={20}
-                alt=""
-              />
-            </div>
-          </div>
+          </div> 
           <div className={statusClass(2)}>
             <Image src="/img/bike.png" width={30} height={30} alt="" />
             <span>On the way</span>
@@ -101,9 +88,6 @@ const Order = ({ order }) => {
             <b className={styles.totalTextTitle}>Subtotal:</b>${order.total}
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Discount:</b>$0.00
-          </div>
-          <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>Total:</b>${order.total}
           </div>
           <button disabled className={styles.button}>
@@ -116,9 +100,7 @@ const Order = ({ order }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(
-    `https://restaurant-tamusa-d25b73ff550d.herokuapp.com/api/orders/${params.id}`
-  );
+  const res = await axios.get(`http://localhost:3000/api/orders/${params.id}`);
   return {
     props: { order: res.data },
   };

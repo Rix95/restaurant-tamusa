@@ -7,8 +7,7 @@ const Footer = () => {
       <div className={styles.item}>
         <div className={styles.card}>
           <h2 className={styles.motto}>
-            WE PUT THE <em>HAM</em> IN YOUR BURGERS. <br></br>TRY OUR WEEKLY
-            SPECIALS!
+            WE SELL THE BEST <em>BOOKS</em> <br></br> IN THE SOUTHSIDE
           </h2>
         </div>
         <div className={styles.card}>
@@ -28,11 +27,7 @@ const Footer = () => {
           <h1 className={styles.title}>WORKING HOURS</h1>
           <p className={styles.text}>
             MONDAY UNTIL FRIDAY
-            <br /> 10:00 – 22:00
-          </p>
-          <p className={styles.text}>
-            SATURDAY - SUNDAY
-            <br /> 10:00 – 00:00
+            <br /> 10:00 – 20:00
           </p>
         </div>
       </div>
